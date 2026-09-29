@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Latihan 2 - Container & Text')),
+        body: Center(
+          child: Container(
+            padding: const EdgeInsets.all(24),
+            margin: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: Colors.teal, width: 2),
+              boxShadow: const [
+                BoxShadow(color: Colors.black26, blurRadius: 8, offset: Offset(0, 4)),
+              ],
+            ),
+            child: const Text(
+              'Selamat Datang di\nPoliteknik Negeri Lhokseumawe',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.teal,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// **Tugas mahasiswa:**
+
+// 1. Ubah warna, radius sudut, dan tebal border sesuai selera.
+// 2. Tambahkan `gradient` pada `BoxDecoration` (petunjuk: `LinearGradient(colors: [...])`).
+// 3. Buat teks kedua di bawah teks utama (petunjuk: ubah `child` menjadi `Column`).

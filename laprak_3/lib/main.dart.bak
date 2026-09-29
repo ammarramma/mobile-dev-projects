@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Latihan 1 - Column')),
+        body: Column(
+          children: [
+            Container(width: 100, height: 100, color: Colors.red),
+            Container(width: 100, height: 100, color: Colors.green),
+            Container(width: 100, height: 100, color: Colors.blue),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// **Tugas mahasiswa:**
+
+// 1. Jalankan dan amati posisi ketiga kotak.
+// 2. Ubah `Column` menjadi `Row`. Apa yang berubah?
+// 3. Tambahkan `mainAxisAlignment: MainAxisAlignment.spaceEvenly` pada Column. Amati perbedaannya.
+// 4. Tambahkan `crossAxisAlignment: CrossAxisAlignment.end`. Apa efeknya?
+// 5. Bungkus salah satu Container dengan `Expanded(...)` lalu jalankan. Jelaskan apa yang terjadi pada catatan laporan.

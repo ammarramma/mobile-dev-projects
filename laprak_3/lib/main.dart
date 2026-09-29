@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  Widget menuItem(IconData icon, String label, Color color) {
+    return Expanded(
+      child: Container(
+        margin: const EdgeInsets.all(8),
+        padding: const EdgeInsets.symmetric(vertical: 20),
+        decoration: BoxDecoration(
+          color: color.withOpacity(0.15),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 40, color: color),
+            const SizedBox(height: 8),
+            Text(
+              label,
+              style: TextStyle(color: color, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Latihan 3.1 - 3 Menu')),
+        body: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                children: [
+                  menuItem(Icons.home, 'Beranda', Colors.teal),
+                  menuItem(Icons.school, 'Akademik', Colors.orange),
+                  menuItem(Icons.person, 'Profil', Colors.indigo),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
