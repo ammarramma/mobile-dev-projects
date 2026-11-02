@@ -1,0 +1,1 @@
+/home/ramma/Kuliah/mobile/Laprak_Mobile_10.md
